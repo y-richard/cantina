@@ -1,5 +1,5 @@
 // Passo 1 – Declarando variáveis
-var nomeCantina = "Cantina da Escola";
+var nomeCantina = "TechLanches";
 let salgados = 20;
 const precoSalgado = 5;
 
@@ -10,9 +10,9 @@ function logMessage(message) {
 }
 
 // Exibindo as mensagens no HTML
-logMessage("Bem-vindo à " + nomeCantina);
-logMessage("Temos " + salgados + " salgados disponíveis.");
-logMessage("Cada salgado custa R$" + precoSalgado);
+logMessage("Bem-vindo à " + TechLanches);
+logMessage("Temos " + salgados + " 20.");
+logMessage("R$5" + precoSalgado);
 
 // Passo 2 – Atualizando valores
 salgados = salgados - 5;
