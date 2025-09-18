@@ -1,25 +1,25 @@
 // Passo 1 – Declarando variáveis
-
-// Nome da cantina
 var nomeCantina = "Cantina da Escola";
-console.log("Bem-vindo à " + techlanches);
-
-// Quantidade de salgados disponíveis
 let salgados = 20;
-console.log("Temos " + salgados + " salgados disponíveis.");
-
-// Preço fixo de cada salgado
 const precoSalgado = 5;
-console.log("Cada salgado custa R$" + precoSalgado);
+
+// Função para exibir mensagens no HTML
+function logMessage(message) {
+    const logs = document.getElementById('logs');
+    logs.textContent += message + '\n'; // Adiciona a mensagem ao log
+}
+
+// Exibindo as mensagens no HTML
+logMessage("Bem-vindo à " + nomeCantina);
+logMessage("Temos " + salgados + " salgados disponíveis.");
+logMessage("Cada salgado custa R$" + precoSalgado);
 
 // Passo 2 – Atualizando valores
-
-// Atualizando o número de salgados e calculando o valor vendido
 salgados = salgados - 5;
 let totalVendido = 5 * precoSalgado;
 
-console.log("Agora restam " + salgados + " salgados.");
-console.log("A cantina vendeu R$" + totalVendido);
+logMessage("Agora restam " + salgados + " salgados.");
+logMessage("A cantina vendeu R$" + totalVendido);
 
 // Passo 3 – Teste rápido
 
@@ -27,16 +27,12 @@ console.log("A cantina vendeu R$" + totalVendido);
 // Descomente a linha abaixo para ver o erro
 // precoSalgado = 6; // Erro: Cannot assign to 'precoSalgado' because it is a constant.
 
-// O que acontece se criar outra variável com var dentro de um bloco {}?
-
 if (true) {
-  var testeVar = "Sou var";
-  let testeLet = "Sou let";
-  console.log(testeVar); // Funciona
-  console.log(testeLet); // Funciona
+    var testeVar = "Sou var";
+    let testeLet = "Sou let";
+    logMessage(testeVar); // Funciona
+    logMessage(testeLet); // Funciona
 }
 
-console.log(testeVar); // Funciona, pois 'var' é global
-// console.log(testeLet); // ERRO, pois 'let' tem escopo de bloco
-
-
+logMessage(testeVar); // Funciona, pois 'var' é global
+// logMessage(testeLet); // ERRO, pois 'let' tem escopo de bloco
