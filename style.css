@@ -120,3 +120,22 @@ footer {
     color: var(--cor-branca);
     margin-top: 2rem;
 }
+
+/* Estilo para o link do WhatsApp */
+.whatsapp-link {
+    display: inline-block; /* Permite definir padding e margin */
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    color: #ffffff; /* Texto branco */
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 1rem; /* Dá um espaço acima do botão */
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    background-color: #128C7E; /* Cor mais escura ao passar o mouse */
+    color: #ffffff;
+}
