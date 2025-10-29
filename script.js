@@ -1,38 +1,28 @@
-// Passo 1 – Declarando variáveis
-var nomeCantina = "TechLanches";
-let salgados = 20;
-const precoSalgado = 5;
+// Espera o conteúdo da página ser totalmente carregado
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Pega o ano atual
+    const anoAtual = new Date().getFullYear();
+    
+    // Encontra o elemento com o id 'copyright' no HTML
+    const copyrightElemento = document.getElementById('copyright');
+    
+    // Insere o texto do copyright com o ano atual
+    if (copyrightElemento) {
+        copyrightElemento.innerHTML = `&copy; ${anoAtual} Cantina Sabor da Vila. Todos os direitos reservados.`;
+    }
 
-// Função para exibir mensagens no HTML
-function logMessage(message) {
-    const logs = document.getElementById('logs');
-    logs.textContent += message + '\n'; // Adiciona a mensagem ao log
-}
+    // Mensagem de boas-vindas no console do navegador
+    console.log("Página da Cantina carregada com sucesso!");
 
-// Exibindo as mensagens no HTML
-logMessage("Bem-vindo à " + TechLanches);
-logMessage("Temos " + salgados + " 20.");
-logMessage("R$5" + precoSalgado);
+    // Bônus: Rolagem suave para as âncoras do menu
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-// Passo 2 – Atualizando valores
-salgados = salgados - 5;
-let totalVendido = 5 * precoSalgado;
-
-logMessage("Agora restam " + salgados + " salgados.");
-logMessage("A cantina vendeu R$" + totalVendido);
-
-// Passo 3 – Teste rápido
-
-// O que acontece se tentar mudar o valor de precoSalgado?
-// Descomente a linha abaixo para ver o erro
-// precoSalgado = 6; // Erro: Cannot assign to 'precoSalgado' because it is a constant.
-
-if (true) {
-    var testeVar = "Sou var";
-    let testeLet = "Sou let";
-    logMessage(testeVar); // Funciona
-    logMessage(testeLet); // Funciona
-}
-
-logMessage(testeVar); // Funciona, pois 'var' é global
-// logMessage(testeLet); // ERRO, pois 'let' tem escopo de bloco
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});

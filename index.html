@@ -3,14 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste de Variáveis</title>
-    <link rel="stylesheet" href="style.css"> <!-- Adicionando o arquivo CSS -->
+    <title>Cantina Sabor da Vila</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bem-vindo à Cantina da Escola!</h1>
 
-    <!-- Aqui você pode mostrar as mensagens de log -->
-    <pre id="logs"></pre>
+    <header>
+        <h1>Cantina Sabor da Vila</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Bem-vindo à nossa cantina!</h2>
+            <p>O melhor sabor da região, com ingredientes frescos e um toque caseiro.</p>
+            <img src="https://via.placeholder.com/600x300.png?text=Foto+Aconchegante+da+Cantina" alt="Foto da cantina" class="banner-img">
+        </section>
+
+        <section id="cardapio">
+            <h2>Nosso Cardápio</h2>
+            
+            <div class="cardapio-grid">
+                <div class="item-cardapio">
+                    <img src="https://via.placeholder.com/300x200.png?text=Salgado+Delicioso" alt="Salgado">
+                    <h3>Salgados Diversos</h3>
+                    <p>Coxinha, pastel, empada. Sempre frescos!</p>
+                    <span class="preco">R$ 5,00</span>
+                </div>
+                
+                <div class="item-cardapio">
+                    <img src="https://via.placeholder.com/300x200.png?text=Suco+Natural" alt="Suco">
+                    <h3>Sucos Naturais</h3>
+                    <p>Laranja, abacaxi com hortelã, maracujá.</p>
+                    <span class="preco">R$ 7,00</span>
+                </div>
+
+                <div class="item-cardapio">
+                    <img src="https://via.placeholder.com/300x200.png?text=Caf%C3%A9+Expresso" alt="Café">
+                    <h3>Café Expresso</h3>
+                    <p>Grãos selecionados para começar bem o dia.</p>
+                    <span class="preco">R$ 4,00</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Onde nos encontrar</h2>
+            <p>Estamos na Rua das Flores, 123 - Centro.</p>
+            <p><strong>Horário de Funcionamento:</strong> Segunda a Sexta, das 07:00 às 18:00.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p id="copyright"></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
